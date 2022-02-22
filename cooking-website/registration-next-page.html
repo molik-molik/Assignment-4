@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <script src="reg.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reg-style.css" />
+</head>
+<body>
+<div style="display: grid">
+        <label>Name and Surname</label>
+        <input type="text" id="names">
+    <br>
+        <label>E-mail</label>
+        <input type="text" id="mail">
+    <br>
+        <label>Password</label>
+        <input type="text" id="first">
+    <br>
+    <br>
+        <label>Repeat Password</label>
+        <input type="text" id="second">
+    <br>
+    <div id="check">
+        <button onclick="Check()" id="checs">Check</button>
+    </div>
+</div>
+<script type="text/javascript">
+  let first = document.getElementById('first');
+  let second = document.getElementById('second');
+  let names = document.getElementById('names');
+  let mail = document.getElementById('mail');
+  function Check(){
+      if (first.value==null&& second.value == null && names.value==null &&mail.value==null){
+          let p = document.createElement("p");
+          document.getElementById('check').appendChild(p);
+          p.innerHTML="You have successfully joined"
+          document.getElementById('checs').remove();
+      }
+      else{
+          let p = document.createElement("p");
+          document.getElementById('check').appendChild(p);
+          p.innerHTML="Input correctly!"
+          document.getElementById('checs').remove();
+      }
+  }
+</script>
+</body>
+</html>
